@@ -1,4 +1,4 @@
-{% set version = '1.5.2' %}
+{% set version = "1.5.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/paran_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/paran/paran_{{ version }}.tar.gz
-  sha256: 7a089af1db4fb7ca13b588a106ce12725ce6ca6480289c5d7beeba5e07523435
+  sha256: 17fbe5fbc22cef53c115dd94d95814a0e62342b5c18f6a19e7b4b61dfe8fd051
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -40,15 +40,9 @@ about:
   home: https://cran.r-project.org/package=paran
   doc_url: http://alexisdinno.com/Software/files/PA_for_PCA_vs_FA.pdf
   license: GPL-2.0-only
-  summary: An implementation of Horn's technique for numerically and graphically evaluating the
-    components or factors retained in a principle components analysis (PCA) or common
-    factor analysis (FA). Horn's method contrasts eigenvalues produced through a PCA
-    or FA on a number of random data sets of uncorrelated variables with the same number
-    of variables and observations as the experimental or observational data set to produce
-    eigenvalues for components or factors that are adjusted for the sample error-induced
-    inflation. Components with adjusted eigenvalues greater than one are retained. paran
-    may also be used to conduct parallel analysis following Glorfeld's (1995) suggestions
-    to reduce the likelihood of over-retention.
+  summary: An implementation of Horn's technique for numerically and graphically evaluating the components or factors retained in a principle components analysis (PCA) or common factor analysis (FA). Horn's method contrasts eigenvalues produced through a PCA or FA on a number of random data sets of uncorrelated variables
+    with the same number of variables and observations as the experimental or observational data set to produce eigenvalues for components or factors that are adjusted for the sample error-induced inflation. Components with adjusted eigenvalues greater than one are retained. paran may also be used to conduct parallel analysis
+    following Glorfeld's (1995) suggestions to reduce the likelihood of over-retention.
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
