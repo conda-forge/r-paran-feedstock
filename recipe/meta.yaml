@@ -1,4 +1,4 @@
-{% set version = "1.5.4" %}
+{% set version = "1.5.5" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/paran_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/paran/paran_{{ version }}.tar.gz
-  sha256: e9f06801b7ee44c30ee0cc206ecea674cf6f43602d570dc424c629e4607fe17b
+  sha256: 6148017ffcf12f1f6547034c06b1e22445d970d1fff675c72e469abe0643cfcf
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -38,9 +38,9 @@ about:
   home: https://cran.r-project.org/package=paran
   doc_url: http://alexisdinno.com/Software/files/PA_for_PCA_vs_FA.pdf
   license: GPL-2.0-only
-  summary: An implementation of Horn's technique for numerically and graphically evaluating the components or factors retained in a principle components analysis (PCA) or common factor analysis (FA). Horn's method contrasts eigenvalues produced through a PCA or FA on a number of random data sets of uncorrelated variables
-    with the same number of variables and observations as the experimental or observational data set to produce eigenvalues for components or factors that are adjusted for the sample error-induced inflation. Components with adjusted eigenvalues greater than one are retained. paran may also be used to conduct parallel analysis
-    following Glorfeld's (1995) suggestions to reduce the likelihood of over-retention.
+  summary: An implementation of Horn's technique for numerically and graphically evaluating the components or factors retained in a principle components analysis (PCA) or common factor analysis (FA). Horn's method contrasts eigenvalues produced through a PCA or FA on a number of random data sets of uncorrelated 
+    variables with the same number of variables and observations as the experimental or observational data set to produce eigenvalues for components or factors that are adjusted for the sample error-induced inflation. Components with adjusted eigenvalues greater than one are retained. paran may also be used to conduct 
+    parallel analysis following Glorfeld's (1995) suggestions to reduce the likelihood of over-retention.
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
