@@ -1,4 +1,4 @@
-{% set version = "1.5.5" %}
+{% set version = "1.5.6" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/paran_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/paran/paran_{{ version }}.tar.gz
-  sha256: 6148017ffcf12f1f6547034c06b1e22445d970d1fff675c72e469abe0643cfcf
+  sha256: 7fc1bad48a9c3bdeec26685f4730a588ff855e60c149893cff30ce223413498f
 
 build:
   number: 0
